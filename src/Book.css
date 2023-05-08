@@ -1,0 +1,26 @@
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 books per row on desktop */
+    grid-gap: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.2s ease-in-out;
+
+  /* Add pointer cursor on hover */
+  cursor: pointer;
+  }
+  .book-card:hover {
+    /* Increase box shadow on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  @media (max-width: 768px) {
+    .books-grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 books per row on tablet */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .books-grid {
+      grid-template-columns: repeat(1, 1fr); /* 1 book per row on mobile */
+    }
+  }
